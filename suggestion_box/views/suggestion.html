@@ -1,0 +1,22 @@
+<h1 class="animated infinite pulse">
+
+    {{post.title}}</h1>
+<form class="wall" class="list-group">
+    <div class="list-group-item" ng-repeat="comment in post.comments">
+        <div class="panel panel-info">
+            <div class="panel panel-heading">
+                <p>{{comment.body}}</p>
+            </div>
+            <div class="panel-body">
+                <p><span class="glyphicon glyphicon-plus-sign" ng-click="upVotesComments(comment)"></span> Votes : {{comment.upvotes}}</p>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form ng-submit="addComment()" style="margin-top: 50px" class="wall">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Great Ideas here" ng-model="comment">
+    </div>
+    <button type="submit" class="btn btn-primary"> Suggest</button>
+</form>
