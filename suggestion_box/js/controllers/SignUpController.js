@@ -1,7 +1,7 @@
-app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions) {
+app.controller('SignUpController', ['$scope', 'accounts', function($scope, accounts) {
 
-    $scope.name = "SuggestionBox";
-    $scope.posts = suggestions.posts;
+
+    $scope.AccList = accounts.AccList;
 
     $scope.addSuggestionsToBox = function() {
 
@@ -26,7 +26,6 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
     $scope.upVotes = function(post) {
 
         post.upvotes += 1;
-
     };
 
 

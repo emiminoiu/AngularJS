@@ -7,6 +7,7 @@ app.controller('SuggestionController', ['$scope', '$routeParams', 'suggestions',
     $scope.upVotesComments = function(comment) {
 
         comment.upvotes += 1;
+
     };
 
 
